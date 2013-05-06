@@ -2,11 +2,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// ��͂������z���炢���d�݂��K�v���m�F����v���O����
+// 入力した金額から硬貨を何枚だせばよいかわかるプログラム
 public class MoneyCalc {
-	// �d�݂̐�
+	// 硬貨の枚数
 	private static int[] counts = { 0, 0, 0, 0, 0, 0 };
-	// �����̎��
+	// 硬貨の種類
 	private static int[] moneytypes = { 500, 100, 50, 10, 5, 1 };
 
 	public static void main(String args[]) throws NumberFormatException,
