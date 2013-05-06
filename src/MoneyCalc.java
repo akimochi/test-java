@@ -2,11 +2,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// “ü—Í‚µ‚½‹àŠz‚©‚ç‚¢‚­‚Âd‰İ‚ª•K—v‚©Šm”F‚·‚éƒvƒƒOƒ‰ƒ€
+// ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½ï¿½ï¿½ç‚¢ï¿½ï¿½ï¿½Âdï¿½İ‚ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½mï¿½Fï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½
 public class MoneyCalc {
-	// d‰İ‚Ì”
+	// ï¿½dï¿½İ‚Ìï¿½
 	private static int[] counts = { 0, 0, 0, 0, 0, 0 };
-	// ‚¨‹à‚Ìí—Ş
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½
 	private static int[] moneytypes = { 500, 100, 50, 10, 5, 1 };
 
 	public static void main(String args[]) throws NumberFormatException,
@@ -16,7 +16,7 @@ public class MoneyCalc {
 		BufferedReader input = new BufferedReader(new InputStreamReader(
 				System.in));
 
-		System.out.println("‹àŠz‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ");
+		System.out.println("é‡‘é¡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ");
 		money = Integer.parseInt(input.readLine());
 
 		calc(money);
@@ -32,13 +32,13 @@ public class MoneyCalc {
 			m %= moneytypes[i];
 			totalCount += counts[i];
 		}
-		System.out.println("d‰İ‚Ì”‚Í‡Œv‚Å" + String.valueOf(totalCount) + "–‡");
+		System.out.println("ç¡¬è²¨ã®æ•°ã¯åˆè¨ˆã§" + String.valueOf(totalCount) + "æš");
 	}
 
 	private static void display() {
-		System.out.println("d‰İ‚Ì“à–ó");
+		System.out.println("ç¡¬è²¨ã®å†…è¨³");
 		for (int i = 0; i < moneytypes.length; i++) {
-			System.out.println(moneytypes[i] + "‰~\t" + counts[i] + "–‡");
+			System.out.println(moneytypes[i] + "å††\t" + counts[i] + "æš");
 		}
 	}
 }
