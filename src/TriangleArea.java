@@ -2,6 +2,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 三角形の面積を求めるプログラム 
+ * 
+ * @author mochimamru
+ *
+ */
 public class TriangleArea {
 
 	public static void main(String args[]) throws NumberFormatException, IOException {
@@ -10,11 +16,12 @@ public class TriangleArea {
 		BufferedReader input =
 	            new BufferedReader (new InputStreamReader (System.in));	
 		
-		System.out.println("aを入力してください: ");
+		System.out.println("三角形の面積を求めるプログラム開始 ");
+		System.out.println("1辺の長さを入力してください: ");
 		a = Double.parseDouble(input.readLine());
-		System.out.println("bを入力してください: ");
+		System.out.println("1辺の長さを入力してください: ");
 		b = Double.parseDouble(input.readLine());
-		System.out.println("cを入力してください: ");
+		System.out.println("1辺の長さを入力してください: ");
 		c = Double.parseDouble(input.readLine());
 		
 		// 1番長い辺が、他の２辺を足した値より小さい
