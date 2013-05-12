@@ -20,18 +20,29 @@ public class MoneyCalc {
 
 	public static void main(String args[]) throws NumberFormatException,
 			IOException {
-		int money;
 
 		BufferedReader input = new BufferedReader(new InputStreamReader(
 				System.in));
 
 		System.out.println("金額を入力してください: ");
-		money = Integer.parseInt(input.readLine());
+		String stringMoney = String.valueOf(input.readLine());
 
+		checkMoney(stringMoney);
+		int money = Integer.parseInt(stringMoney);
+		
 		int coinMoney = billCalc(money);
 		coinCalc(coinMoney);
 		billDisplay();
 		coinDisplay();
+	}
+	
+	private static void checkMoney(String money) {
+		
+		if (money == null || !money.matches("^[0-9]+$")) {
+			// 半角数字に一致しない場合、エラー
+			System.out.println("数値でない値が入力されています");
+		    System.exit(0);
+		}
 	}
 	
 	private static int billCalc(int money) {
